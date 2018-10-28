@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+		<script type="text/javascript">	
+
+		function setup() {
+		  createCanvas(1400, 1400);
+		}
+
+		function draw() {
+		  for(var i=0,l=10;i<l;i++){
+				strokeWeight(1);
+				colorMode(HSB);
+				fill(mouseX-205-i*5, 100, 100);
+				fill(mouseY-100-i*5, 100, 100);
+				rect(mouseX,mouseY,mouseY*1,mouseX*0.5)
+			}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
