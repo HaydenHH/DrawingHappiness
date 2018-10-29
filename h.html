@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+	<script language="javascript" type="text/javascript" src="p5.dom.js"></script>
+	<script type="text/javascript" src="word.js"></script>
+		<script type="text/javascript">	
+
+		window.onload = function(){
+
+
+
+		}
+
+		var dots;
+		var obj;
+		var button;
+		
+
+		function preload(){
+
+			var obj = wordBank
+
+			dots = obj
+
+		}
+
+		
+		function setup() {
+		  createCanvas(1400, 1400);
+		  button = createButton('click me');
+		  button.position(20,20)
+		  button.mousePressed()
+		}
+
+		function draw() {
+		  for(var i=0,l=50;i<l;i++){
+				strokeWeight(1);
+				colorMode(HSB);
+				x = dots[i].strokes * 20
+				y = dots[i].strokes * 20 
+				fill(mouseX-205-i*5, 100, 100);
+				fill(mouseY-100-i*5, 100, 100);
+				rect(x,y,mouseX,50)
+			}
+		}
+
+	</script>
+</head>
+<body>
+</body>
+</html>
